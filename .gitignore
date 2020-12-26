@@ -1,6 +1,6 @@
 .DS_Store
 *.opendb
-.vs
+.vs/
 
 # Prerequisites
 *.d
