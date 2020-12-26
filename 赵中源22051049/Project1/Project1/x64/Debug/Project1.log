@@ -1,0 +1,7 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1044,5): warning MSB8027: 名为 main.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 imgui\main.cpp, main.cpp。
+  main.cpp
+  shader.cpp
+C:\Users\10913\Desktop\zuoye\graphics2020\赵中源22051049\Project1\Project1\shader.cpp(41,36): warning C4101: “e”: 未引用的局部变量
+  正在生成代码...
+x64\Debug\main.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+  Project1.vcxproj -> C:\Users\10913\Desktop\zuoye\graphics2020\赵中源22051049\Project1\x64\Debug\Project1.exe
