@@ -39,10 +39,10 @@
     <ClCompile Include="imgui\imgui_widgets.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="imgui\main.cpp">
+    <ClCompile Include="shader.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="shader.cpp">
+    <ClCompile Include="mesh.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -1166,6 +1166,15 @@
     <ClInclude Include="shader.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="include\assimp\color4.inl">
@@ -1600,9 +1609,69 @@
     <None Include="include\glm\gtx\wrap.inl">
       <Filter>头文件</Filter>
     </None>
+    <None Include="shader\model.vert" />
+    <None Include="shader\model.frag" />
+    <None Include="src\model\nanosuit.blend" />
+    <None Include="src\model\nanosuit.mtl" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\assimp-vc142-mtd.lib" />
     <Library Include="lib\glfw3.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\model\arm_dif.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="src\model\arm_showroom_ddn.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="src\model\arm_showroom_spec.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="src\model\body_dif.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="src\model\body_showroom_ddn.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="src\model\body_showroom_spec.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="src\model\glass_ddn.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="src\model\glass_dif.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="src\model\hand_dif.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="src\model\hand_showroom_ddn.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="src\model\hand_showroom_spec.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="src\model\helmet_diff.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="src\model\helmet_showroom_ddn.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="src\model\helmet_showroom_spec.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="src\model\leg_dif.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="src\model\leg_showroom_ddn.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="src\model\leg_showroom_spec.png">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\model\LICENSE.txt" />
   </ItemGroup>
 </Project>

@@ -157,12 +157,13 @@
     <ClCompile Include="imgui\imgui_impl_glfw.cpp" />
     <ClCompile Include="imgui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="imgui\imgui_widgets.cpp" />
-    <ClCompile Include="imgui\main.cpp" />
     <ClCompile Include="include\glm\detail\glm.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mesh.cpp" />
     <ClCompile Include="shader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="camera.h" />
     <ClInclude Include="imgui\imconfig.h" />
     <ClInclude Include="imgui\imgui.h" />
     <ClInclude Include="imgui\imgui_impl_glfw.h" />
@@ -535,6 +536,8 @@
     <ClInclude Include="include\glm\vector_relational.hpp" />
     <ClInclude Include="include\KHR\khrplatform.h" />
     <ClInclude Include="include\stb_image.h" />
+    <ClInclude Include="mesh.h" />
+    <ClInclude Include="model.h" />
     <ClInclude Include="shader.h" />
   </ItemGroup>
   <ItemGroup>
@@ -682,10 +685,36 @@
     <None Include="include\glm\gtx\vector_angle.inl" />
     <None Include="include\glm\gtx\vector_query.inl" />
     <None Include="include\glm\gtx\wrap.inl" />
+    <None Include="shader\model.frag" />
+    <None Include="shader\model.vert" />
+    <None Include="src\model\nanosuit.blend" />
+    <None Include="src\model\nanosuit.mtl" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\assimp-vc142-mtd.lib" />
     <Library Include="lib\glfw3.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\model\arm_dif.png" />
+    <Image Include="src\model\arm_showroom_ddn.png" />
+    <Image Include="src\model\arm_showroom_spec.png" />
+    <Image Include="src\model\body_dif.png" />
+    <Image Include="src\model\body_showroom_ddn.png" />
+    <Image Include="src\model\body_showroom_spec.png" />
+    <Image Include="src\model\glass_ddn.png" />
+    <Image Include="src\model\glass_dif.png" />
+    <Image Include="src\model\hand_dif.png" />
+    <Image Include="src\model\hand_showroom_ddn.png" />
+    <Image Include="src\model\hand_showroom_spec.png" />
+    <Image Include="src\model\helmet_diff.png" />
+    <Image Include="src\model\helmet_showroom_ddn.png" />
+    <Image Include="src\model\helmet_showroom_spec.png" />
+    <Image Include="src\model\leg_dif.png" />
+    <Image Include="src\model\leg_showroom_ddn.png" />
+    <Image Include="src\model\leg_showroom_spec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\model\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
