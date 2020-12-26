@@ -685,6 +685,8 @@
     <None Include="include\glm\gtx\vector_angle.inl" />
     <None Include="include\glm\gtx\vector_query.inl" />
     <None Include="include\glm\gtx\wrap.inl" />
+    <None Include="shader\lightcube.frag" />
+    <None Include="shader\lightcube.vert" />
     <None Include="shader\model.frag" />
     <None Include="shader\model.vert" />
     <None Include="src\model\nanosuit.blend" />

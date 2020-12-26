@@ -67,10 +67,68 @@ int main()
 
     glEnable(GL_DEPTH_TEST);
 
-    // program
+    // -------------------------------------data settings
     Shader ourShader("shader/model.vert", "shader/model.frag");
+    Shader lightcubeShader("shader/lightcube.vert", "shader/lightcube.frag");
     Model ourModel("src/model/nanosuit.obj");
     
+    // draw a box
+    float vertices[] = {
+        // positions          // normals           // texture coords
+        -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  0.0f,  0.0f,
+         0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  1.0f,  0.0f,
+         0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  1.0f,  1.0f,
+         0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  1.0f,  1.0f,
+        -0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  0.0f,  1.0f,
+        -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  0.0f,  0.0f,
+
+        -0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  0.0f,  0.0f,
+         0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  1.0f,  0.0f,
+         0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  1.0f,  1.0f,
+         0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  1.0f,  1.0f,
+        -0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  0.0f,  1.0f,
+        -0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  0.0f,  0.0f,
+
+        -0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,  1.0f,  0.0f,
+        -0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f,  1.0f,  1.0f,
+        -0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,  0.0f,  1.0f,
+        -0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,  0.0f,  1.0f,
+        -0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f,  0.0f,  0.0f,
+        -0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,  1.0f,  0.0f,
+
+         0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,  1.0f,  0.0f,
+         0.5f,  0.5f, -0.5f,  1.0f,  0.0f,  0.0f,  1.0f,  1.0f,
+         0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,  0.0f,  1.0f,
+         0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,  0.0f,  1.0f,
+         0.5f, -0.5f,  0.5f,  1.0f,  0.0f,  0.0f,  0.0f,  0.0f,
+         0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,  1.0f,  0.0f,
+
+        -0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,  0.0f,  1.0f,
+         0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,  1.0f,  1.0f,
+         0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,  1.0f,  0.0f,
+         0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,  1.0f,  0.0f,
+        -0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,  0.0f,  0.0f,
+        -0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,  0.0f,  1.0f,
+
+        -0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,  0.0f,  1.0f,
+         0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,  1.0f,  1.0f,
+         0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,  1.0f,  0.0f,
+         0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,  1.0f,  0.0f,
+        -0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,  0.0f,  0.0f,
+        -0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,  0.0f,  1.0f
+    };
+
+    
+    GLuint VBO,VAO;
+    glGenVertexArrays(1, &VAO);
+    glGenBuffers(1, &VBO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+    glBindVertexArray(VAO);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+
 
     //set imgui context
     IMGUI_CHECKVERSION();
@@ -82,8 +140,14 @@ int main()
     ImGui_ImplOpenGL3_Init(glsl_version);
 
     // imgui parameters setting
-    ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
-    float scale = 1.0f;
+    ImVec4 clear_color = ImVec4(0.1f, 0.1f, 0.1f, 1.00f);
+    float scale = 0.5f;
+    float lightpositionX = 0.0f;
+    float lightpositionY = 5.0f;
+    float lightpositionZ = 3.0f;
+    float ambient = 0.3f;
+    float diffuse = 0.8f;
+    float specular = 1.5f;
 
     while (!glfwWindowShouldClose(window))
     {
@@ -98,7 +162,13 @@ int main()
         lastFrame = currentFrame;
 
         ImGui::ColorEdit3("clear color", (float*)&clear_color);
-        ImGui::SliderFloat("change model size", &scale, 0.0f, 1.0f);
+        ImGui::SliderFloat("model size", &scale, 0.0f, 1.0f);
+        ImGui::SliderFloat("ambient", &ambient, 0.0f, 1.0f);
+        ImGui::SliderFloat("diffuse", &diffuse, 0.0f, 1.0f);
+        ImGui::SliderFloat("specular", &specular, 0.0f, 5.0f);
+        ImGui::SliderFloat("lightposition X", &lightpositionX, -10.0f, 10.0f);
+        ImGui::SliderFloat("lightposition Y", &lightpositionY, -10.0f, 10.0f);
+        ImGui::SliderFloat("lightposition Z", &lightpositionZ, -10.0f, 10.0f);
         ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 
         glClearColor(clear_color.x, clear_color.y, clear_color.z, clear_color.w);
@@ -106,6 +176,23 @@ int main()
 
         // -----------------------------------start rendering
         ourShader.use();
+        
+        ourShader.setVec3("viewPos", camera.Position);
+        ourShader.setFloat("material.shininess", 32.0f);
+        // point light
+        glm::vec3 pointLightPosition = glm::vec3(lightpositionX, lightpositionY, lightpositionZ);
+        ourShader.setVec3("pointlight.position", pointLightPosition);
+        ourShader.setVec3("pointlight.ambient", ambient, ambient, ambient);
+        ourShader.setVec3("pointlight.diffuse", diffuse, diffuse, diffuse);
+        ourShader.setVec3("pointlight.specular", specular, specular, specular);
+        ourShader.setFloat("pointlight.constant", 1.0f);
+        ourShader.setFloat("pointlight.linear", 0.09);
+        ourShader.setFloat("pointlight.quadratic", 0.032);
+        //directional light
+        ourShader.setVec3("dirLight.direction", -0.2f, -1.0f, -0.3f);
+        ourShader.setVec3("dirLight.ambient", 0.05f, 0.05f, 0.05f);
+        ourShader.setVec3("dirLight.diffuse", 0.4f, 0.4f, 0.4f);
+        ourShader.setVec3("dirLight.specular", 0.5f, 0.5f, 0.5f);
         // view/projection transformations
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
         glm::mat4 view = camera.GetViewMatrix();
@@ -117,7 +204,19 @@ int main()
         model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f)); // translate it down so it's at the center of the scene
         model = glm::scale(model, glm::vec3(scale, scale, scale));	// it's a bit too big for our scene, so scale it down
         ourShader.setMat4("model", model);
+
+
         ourModel.Draw(ourShader);
+        
+        lightcubeShader.use();
+        lightcubeShader.setMat4("projection", projection);
+        lightcubeShader.setMat4("view", view);
+        glm::mat4 cubemodel = glm::mat4(1.0f);
+        cubemodel = glm::translate(cubemodel, pointLightPosition);
+        cubemodel = glm::scale(cubemodel, glm::vec3(0.5f));
+        lightcubeShader.setMat4("model", cubemodel);
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
         // -----------------------------------end rendering
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());

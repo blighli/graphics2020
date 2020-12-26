@@ -1613,6 +1613,8 @@
     <None Include="shader\model.frag" />
     <None Include="src\model\nanosuit.blend" />
     <None Include="src\model\nanosuit.mtl" />
+    <None Include="shader\lightcube.vert" />
+    <None Include="shader\lightcube.frag" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\assimp-vc142-mtd.lib" />
