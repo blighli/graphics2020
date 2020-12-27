@@ -1,0 +1,11 @@
+﻿  main.cpp
+C:\Users\lhz_l\courses\Animation\graphics2020\22051015李昊泽\Project01\Project01\main.cpp(125,28): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\lhz_l\courses\Animation\graphics2020\22051015李昊泽\Project01\Project01\main.cpp(107,28): warning C4101: “EBO”: 未引用的局部变量
+C:\Users\lhz_l\courses\Animation\graphics2020\22051015李昊泽\Project01\Project01\main.cpp(181,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\lhz_l\courses\Animation\graphics2020\22051015李昊泽\Project01\Project01\main.cpp(182,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\lhz_l\courses\Animation\graphics2020\22051015李昊泽\Project01\Project01\main.cpp(186,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\lhz_l\courses\Animation\graphics2020\22051015李昊泽\Project01\Project01\main.cpp(187,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\lhz_l\courses\Animation\graphics2020\22051015李昊泽\Project01\Project01\main.cpp(189,13): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\lhz_l\courses\Animation\graphics2020\22051015李昊泽\Project01\Project01\main.cpp(190,13): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\lhz_l\courses\Animation\graphics2020\22051015李昊泽\Project01\Project01\main.cpp(197,31): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+  Project01.vcxproj -> C:\Users\lhz_l\courses\Animation\graphics2020\22051015李昊泽\Project01\x64\Debug\Project01.exe
