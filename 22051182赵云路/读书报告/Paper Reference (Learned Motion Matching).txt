@@ -1,0 +1,3 @@
+Daniel Holden, Oussama Kanoun, Maksym Perepichka, and Tiberiu Popa.
+2020. Learned Motion Matching. ACM Trans. Graph. 39, 4, Article 1 (July 2020),
+13 pages. https://doi.org/10.1145/3386569.3392440
