@@ -7,19 +7,15 @@
 - Assets：资源文件
 
 ## 特性
-* 渲染：
+* 渲染：  
     PBR + IBL
 	
-* 场景载入：
+* 场景载入：  
     支持 [glTF 2.0](https://github.com/KhronosGroup/glTF)
 	
 * 相机控制（按 T 切换 CameraController）：
-    * OrbiterCameraController：
-    > 按住鼠标右键或者中键然后移动鼠标，控制相机旋转、移动
-    > 鼠标滚轮调整相机距离
-    * FirstPersonCameraController：
-    > 按住鼠标右键移动鼠标，控制相机以第一人称视角旋转
-    > W、S、A、D、Q、E 控制相机前后左右上下移动
+    * OrbiterCameraController： 按住鼠标右键或者中键然后移动鼠标，控制相机旋转、移动； 鼠标滚轮调整相机距离
+    * FirstPersonCameraController： 按住鼠标右键移动鼠标，控制相机以第一人称视角旋转； W、S、A、D、Q、E 控制相机前后左右上下移动
 
 ## 示例
 ![GIF](./Samples/sample_teapot.gif)
