@@ -22,8 +22,8 @@
     > W、S、A、D、Q、E 控制相机前后左右上下移动
 
 ## 示例
-![GIF](/Samples/sample_teapot.gif?raw=true)
-![GIF](/Samples/sample_spheres.gif?raw=true)
+![GIF](./Samples/sample_teapot.gif)
+![GIF](./Samples/sample_spheres.gif)
 
 ## 参考
 https://learnopengl.com/
