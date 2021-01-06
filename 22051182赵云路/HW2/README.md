@@ -27,7 +27,7 @@
 ## 示例
 ![GIF](./Samples/sample_picking.gif)
 ![GIF](./Samples/sample_lighting.gif)
-![image](./Samples/screenshot01.gif)
+![image](./Samples/screenshot01.jpg)
 
 ## Licenses and acknowledgments
 本次作业使用的资源文件来源于：
