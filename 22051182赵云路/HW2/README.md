@@ -8,7 +8,7 @@
 
 ## 特性
 * 光照模型：
-	Cook-Torrance BRDF 光照模型
+	- Cook-Torrance BRDF 光照模型
 
 * 材质贴图（本次作业仅使用了颜色贴图和发光贴图）：
     - 支持 Albedo 贴图
@@ -22,12 +22,12 @@
 	- 在太阳中心位置放置一个点光源模拟太阳光照
 
 * 拾取（Picking）：
-	拾取算法大体上可分为基于 CPU 的方法（如 Ray casting）和基于 GPU 的方法。本次作业中实现了一种基于 GPU 的方法：在帧缓存中额外添加一个颜色附件；绘制时，将所绘制物体的 ID 写入该颜色附件中；当发生鼠标左键单击事件时，读取该颜色附件对应像素的物体 ID，从而获取被拾取的物体。
+	- 拾取算法大体上可分为基于 CPU 的方法（如 Ray casting）和基于 GPU 的方法。本次作业中实现了一种基于 GPU 的方法：在帧缓存中额外添加一个颜色附件；绘制时，将所绘制物体的 ID 写入该颜色附件中；当发生鼠标左键单击事件时，读取该颜色附件对应像素的物体 ID，从而获取被拾取的物体。
 
 ## 示例
 ![GIF](./Samples/sample_picking.gif)
 ![GIF](./Samples/sample_lighting.gif)
-![image](./Samples/screenshot01.gif)
+![image](./Samples/screenshot01.jpg)
 
 ## Licenses and acknowledgments
 本次作业使用的资源文件来源于：
