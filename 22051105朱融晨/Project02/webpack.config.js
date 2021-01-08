@@ -9,7 +9,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "../Project01/public", "index.html")
+      template: path.resolve(__dirname, "../Project02/public", "index.html")
     })
   ],
 

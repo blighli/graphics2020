@@ -2,4 +2,27 @@ body {
   background: #efefef;
   margin: 0;
   overflow: hidden;
+  position: relative;
+}
+
+.info-box {
+  position: absolute;
+  top: 60%;
+  left: 20px;
+  min-width: 200px;
+  background: transparent;
+  padding: 10px;
+  border: 1px solid #fff;
+  margin: 10px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+#header {
+  text-align: center;
+}
+
+.show {
+  opacity: 1;
 }
