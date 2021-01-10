@@ -2,8 +2,9 @@
 
 ## 基于 WebGL 和 Three.js 实现的太阳-地球-月球行星系统
 
-开始之前需要安装 Node 并执行命令 `npm install` 来下载所需要的包。
-下载完成后，执行 `npm start` 并打开浏览器访问 http://localhost:8081/ 即可浏览效果。
+~~开始之前需要安装 Node 并执行命令 `npm install` 来下载所需要的包。~~
+~~下载完成后，执行 `npm start` 并打开浏览器访问 http://localhost:8081/ 即可浏览效果。~~
+本项目已打包，不需要使用 Node，直接进入 index.html 即可访问。
 使用鼠标拖动即可实现角度切换，焦点默认锁定在太阳上。
 
 ## 已完成的特性
