@@ -16,6 +16,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.glsl$/,
+        use: ['webpack-glsl-loader']
+      },
+      {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {

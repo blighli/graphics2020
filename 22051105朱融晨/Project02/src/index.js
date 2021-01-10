@@ -3,6 +3,10 @@ import * as THREE from 'three';
 import './styles/index.css';
 import images from './assets/index';
 import Track from './Track';
+import { vec4 } from 'gl-matrix';
+import VERTEX_SHADER from './shaders/vertex.glsl';
+import FRAG_SHADER from './shaders/fragment.glsl';
+import { Vector4 } from 'three';
 
 const clock = new THREE.Clock();
 const DIS = 4;
@@ -106,17 +110,71 @@ function init() {
   scene.add(sunMesh);
 
   const textures = planets.map((planet) => loader.load(images[planet.path]));
+  
+  // uniform
+  const lightPosition = new vec4.fromValues(0.5, 0.4, 1.0, 0.0);
+
+  const lightAmbient = new vec4.fromValues(1.0, 1.0, 1.0, 1.0);
+  const lightDiffuse = new vec4.fromValues(0.8, 0.8, 0.8, 1.0);
+  const lightSpecular = new vec4.fromValues(0.8, 0.8, 0.8, 1.0);
+
+  const materialAmbient = new vec4.fromValues(1.0, 1.0, 1.0, 1.0);
+  const materialDiffuse = new vec4.fromValues(0.3, 0.3, 0.3, 1.0);
+  const materialSpecular = new vec4.fromValues(0.3, 0.3, 0.3, 1.0);
+  const materialShininess = 80.0;
+
+  let ambientProduct = vec4.create();
+  let diffuseProduct = vec4.create();
+  let specularProduct = vec4.create();
+
+  vec4.mul(ambientProduct, lightAmbient, materialAmbient);
+  vec4.mul(diffuseProduct, lightDiffuse, materialDiffuse);
+  vec4.mul(specularProduct, lightSpecular, materialSpecular);
+
+  // const materials = textures.map(
+  //   (texture) =>
+  //     new THREE.MeshStandardMaterial({
+  //       map: texture,
+  //     })
+  // );
+
+  // console.log(THREE.ShaderLib['basic'])
+
   const materials = textures.map(
-    (texture) =>
-      new THREE.MeshStandardMaterial({
-        map: texture,
+    (texture) => {
+      let material = new THREE.ShaderMaterial({
+        uniforms: {
+          Ka: { value: new THREE.Vector4(1.0, 1.0, 1.0, 1.0)},
+          Kd: { value: new THREE.Vector4(1.0, 1.0, 1.0, 1.0)},
+          Ks: { value: new THREE.Vector4(1.0, 1.0, 1.0, 1.0)},
+          LightIntensity: { value: new THREE.Vector4(0.5, 0.5, 0.5, 1.0) },
+          LightPosition: { value: lightPosition },
+          Shininess: { value: materialShininess },
+
+          'map': { type: 't', value: null },
+          'time': { value: 0.0 }
+        },
+        vertexShader: VERTEX_SHADER,
+        fragmentShader: FRAG_SHADER,
       })
+
+      material.uniforms.map.value = texture;
+
+      return material;
+    }
   );
+
+  console.log(materials[0].uniforms)
+
+  let mesh = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1),materials[0])
+  mesh.position.x = 2
+  scene.add(mesh)
+
 
   const meshGroup = new THREE.Group();
 
   const meshes = materials.map((material) => {
-    let geometry = new THREE.SphereGeometry(1, 32, 32);
+    let geometry = new THREE.SphereGeometry(2, 32, 32);
     return new THREE.Mesh(geometry, material);
   });
 
@@ -215,12 +273,16 @@ function init() {
 
         mt = (mt >= 1) ? 0 : mt += (0.05 * planets[i].revolution / inverseSpeed);
         planetsT[i] = mt;
+
+        // materials[i].uniforms.time.value = radians;
       })
       
       
       // 自转
       meshes.forEach((mesh, i) => {
-        mesh.rotation.y += delta * planets[i].rotation;
+        let addValue = delta * planets[i].rotation;
+        // materials[i].uniforms.time.value = THREE.Math.radToDeg(mesh.rotation.y) % 360;
+        mesh.rotation.y += addValue;
       })
 
       controls.update();
