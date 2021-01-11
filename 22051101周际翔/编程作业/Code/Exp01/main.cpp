@@ -25,6 +25,7 @@ namespace Luna
 	void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 	{
 		glViewport(0, 0, width, height);
+		camera.aspect_ratio = ((f32)width / (f32)height);
 	}
 
 	void check_shader_compile_error(GLuint shader, const c8* type)
