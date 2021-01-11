@@ -235,7 +235,7 @@ namespace Luna
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 		glfwSetErrorCallback(error_callback);
-		GLFWwindow* window = glfwCreateWindow(800, 600, "Exp01", NULL, NULL);
+		GLFWwindow* window = glfwCreateWindow(800, 600, "Exp02", NULL, NULL);
 		luassert_always(window);
 		glfwSetKeyCallback(window, key_callback);
 		glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
@@ -246,6 +246,7 @@ namespace Luna
 		GLuint sun_program = load_program("SunVS.glsl", "SunFS.glsl");
 		GLuint skybox_program = load_program("SkyBoxVS.glsl", "SkyBoxFS.glsl");
 		GLuint earth_program = load_program("EarthVS.glsl", "EarthFS.glsl");
+		GLuint planet_program = load_program("PlanetVS.glsl", "PlanetFS.glsl");
 		
 		// Load all textures.
 		GLuint skybox_tex = load_texture("4k_stars_milky_way.png");
@@ -254,6 +255,7 @@ namespace Luna
 		GLuint night_tex = load_texture("4k_earth_nightmap.png");
 		GLuint cloud_tex = load_texture("4k_earth_clouds.png");
 		GLuint specular_tex = load_texture("4k_earth_specular_map.png");
+		GLuint moon_tex = load_texture("4k_moon.png");
 		
 		// Create skybox geometry.
 		GLuint skybox_vao, skybox_vbo, skybox_ibo;
@@ -345,24 +347,35 @@ namespace Luna
 			free(earth_indices);
 		}
 
-		/*
+		// Create Moon Geometry.
+		GLuint moon_vao, moon_vbo, moon_ibo;
+		constexpr u32 moon_long = 32;
+		constexpr u32 moon_lat = 16;
+		u32 moon_vert_count = 0;
+		constexpr f32 moon_radius = 0.3f;
+		u32 moon_idx_count = 0;
+		{
+			Vertex* moon_geo;
+			u32* moon_indices;
 
-		GLuint VAO, VBO, IBO;
-		glGenVertexArrays(1, &VAO);
-		glGenBuffers(1, &VBO);
-		glGenBuffers(1, &IBO);
-		glBindVertexArray(VAO);
-		glBindBuffer(GL_ARRAY_BUFFER, VBO);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
-		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+			generate_sphere_mesh(moon_lat, moon_long, moon_radius, sizeof(Vertex), 0, (void**)&moon_geo, &moon_indices, moon_vert_count, moon_idx_count);
 
-		// position attribute
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(f32), (void*)0);
-		glEnableVertexAttribArray(0);
-		// color attribute
-		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(f32), (void*)(3 * sizeof(f32)));
-		glEnableVertexAttribArray(1);*/
+			glGenVertexArrays(1, &moon_vao);
+			glGenBuffers(1, &moon_vbo);
+			glGenBuffers(1, &moon_ibo);
+			glBindVertexArray(moon_vao);
+			glBindBuffer(GL_ARRAY_BUFFER, moon_vbo);
+			glBufferData(GL_ARRAY_BUFFER, moon_vert_count * sizeof(Vertex), moon_geo, GL_STATIC_DRAW);
+			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, moon_ibo);
+			glBufferData(GL_ELEMENT_ARRAY_BUFFER, moon_idx_count * sizeof(u32), moon_indices, GL_STATIC_DRAW);
+
+			// position attribute
+			glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(f32), (void*)0);
+			glEnableVertexAttribArray(0);
+
+			free(moon_geo);
+			free(moon_indices);
+		}
 
 		camera.transform.position = Float3(0.0f, 0.0f, -5.0f);
 
@@ -374,6 +387,11 @@ namespace Luna
 		f32 earth_rotate_rad = 0.0f;
 		f32 earth_rotate_speed = pi / 360.0f;
 		f32 earth_revolve_spped = earth_rotate_speed / 365.0f;
+		f32 moon_distance = 5.0f;
+		f32 moon_revolve_rad = 0.0f;
+		f32 moon_rotate_rad = 0.0f;
+		f32 moon_revolve_speed = earth_rotate_speed / 30.0f;
+		f32 moon_rotate_speed = moon_revolve_speed;
 
 		while (!glfwWindowShouldClose(window))
 		{
@@ -501,6 +519,27 @@ namespace Luna
 			glBindVertexArray(earth_vao);
 			glDrawElements(GL_TRIANGLES, earth_idx_count, GL_UNSIGNED_INT, NULL);
 
+			// Draw Moon.
+			glUseProgram(planet_program);
+			Tranform3D moon_transform = Tranform3D(
+				Float3(earth_distance * sinf(earth_revolve_rad), 0.0f, earth_distance * cosf(earth_revolve_rad)) + Float3(moon_distance * sinf(moon_revolve_rad), 0.0f, moon_distance * cosf(moon_revolve_rad)),
+				Quaternion::from_axis_angle(Float3(0.0f, 1.0f, 0.0f), moon_rotate_rad),
+				Float3::one());
+			moon_revolve_rad += moon_revolve_speed;
+			moon_rotate_rad += moon_rotate_speed;
+			model = Float4x4::make_affine_position_rotation_scale(moon_transform.position, moon_transform.rotation, moon_transform.scale);
+			glUniformMatrix4fv(glGetUniformLocation(planet_program, "model"), 1, GL_FALSE, &model[0][0]);
+			glUniformMatrix4fv(glGetUniformLocation(planet_program, "view"), 1, GL_FALSE, &view[0][0]);
+			glUniformMatrix4fv(glGetUniformLocation(planet_program, "projection"), 1, GL_FALSE, &proj[0][0]);
+			glUniform4f(glGetUniformLocation(planet_program, "sun_pos"), 0.0f, 0.0f, 0.0f, 1.0f);
+
+			glUniform1i(glGetUniformLocation(planet_program, "color_tex"), 0);
+			glActiveTexture(GL_TEXTURE0);
+			glBindTexture(GL_TEXTURE_2D, moon_tex);
+
+			glBindVertexArray(moon_vao);
+			glDrawElements(GL_TRIANGLES, moon_idx_count, GL_UNSIGNED_INT, NULL);
+
 			glFlush();
 
 			glfwSwapBuffers(window);
@@ -524,6 +563,15 @@ namespace Luna
 		glDeleteTextures(1, &cloud_tex);
 		glDeleteTextures(1, &specular_tex);
 		glDeleteProgram(earth_program);
+		glDeleteVertexArrays(1, &earth_vao);
+		glDeleteBuffers(1, &earth_vbo);
+		glDeleteBuffers(1, &earth_ibo);
+
+		glDeleteProgram(planet_program);
+		glDeleteTextures(1, &moon_tex);
+		glDeleteVertexArrays(1, &moon_vao);
+		glDeleteBuffers(1, &moon_vbo);
+		glDeleteBuffers(1, &moon_ibo);
 
 		glfwDestroyWindow(window);
 	}
