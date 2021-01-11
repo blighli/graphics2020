@@ -17,7 +17,7 @@
 
 2. 使用Visual Studio打开`Solution/HW.sln`。
 
-3. 编译`Exp1`，依赖库`Runtime`、`glfw`和`glad`会一起编译。
+3. 编译任意作业，所有依赖库会一起编译。
 
 # 编程作业1：OpenGL基本程序 (Code/Exp1)
 
