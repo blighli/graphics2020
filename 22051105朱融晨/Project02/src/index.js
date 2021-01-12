@@ -147,7 +147,7 @@ function init() {
           Ka: { value: new THREE.Vector4(1.0, 1.0, 1.0, 1.0)},
           Kd: { value: new THREE.Vector4(1.0, 1.0, 1.0, 1.0)},
           Ks: { value: new THREE.Vector4(1.0, 1.0, 1.0, 1.0)},
-          LightIntensity: { value: new THREE.Vector4(0.5, 0.5, 0.5, 1.0) },
+          LightIntensity: { value: new THREE.Vector4(0.8, 0.8, 0.8, 1.0) },
           LightPosition: { value: lightPosition },
           Shininess: { value: materialShininess },
 
@@ -170,29 +170,27 @@ function init() {
   mesh.position.x = 2
   scene.add(mesh)
 
-
-  const meshGroup = new THREE.Group();
-
-  const meshes = materials.map((material) => {
+  const meshes = materials.map((material, i) => {
     let geometry = new THREE.SphereGeometry(2, 32, 32);
-    return new THREE.Mesh(geometry, material);
-  });
+    let mesh = new THREE.Mesh(geometry, material);
+    mesh.name = planets[i].name
 
-  meshes.forEach((mesh, i) => {
     let t = planetsT[i]
     const {x, y, z} = paths[i].getPoint(t);
     mesh.position.set(x, y, z);
     mesh.scale.setScalar(planets[i].scale);
-    // meshGroup.add(mesh);
-    // scene.add(mesh)
+
+    scene.add(mesh)
+    return mesh;
   });
 
-  const meshGroups = meshes.map((mesh) => {
-    let meshGroup = new THREE.Group();
-    meshGroup.add(mesh);
-    scene.add(meshGroup);
-    return meshGroup;
-  });
+  // const meshGroups = meshes.map((mesh, i) => {
+  //   let meshGroup = new THREE.Group();
+  //   meshGroup.name = planets[i].name
+  //   meshGroup.add(mesh);
+  //   scene.add(meshGroup);
+  //   return meshGroup;
+  // });
 
   // stars
   const starts = Array({length: 500}, () => ({
@@ -208,7 +206,7 @@ function init() {
   createSpotlights(scene);
 
   // Lighting
-	var luzAmbiente = new THREE.AmbientLight( 0x404040);  // Ambient light
+	var luzAmbiente = new THREE.AmbientLight(0x404040);
 	scene.add(luzAmbiente)
 
 	renderer.shadowMapSoft = true;
@@ -233,16 +231,28 @@ function init() {
 
     raycaster.setFromCamera(mouse, camera);
     
-    for(let i = 0; i < meshes.length; ++i) {
-      let obj = meshes[i];
-      let intersects = raycaster.intersectObjects([obj]);
+    // for(let i = 0; i < meshGroups.length; ++i) {
+    //   let obj = meshes[i];
+    //   let intersects = raycaster.intersectObjects([obj]);
 
-      console.log(intersects)
-      if(intersects.length > 0) {
-        console.log(planets[i].name)
-      }
+    //   console.log(intersects)
+    //   if(intersects.length > 0) {
+    //     console.log(planets[i].name)
+    //   }
+    // }
+    let intersects = raycaster.intersectObjects(meshes);
+    if(intersects.length > 0) {
+      let picked = intersects[0].object;
+
+      console.log(picked.name);
+      updateInfo(picked.name);
+    } else {
+      intersects = raycaster.intersectObject(sunMesh)
+      // console.log(intersects)
+      updateInfo(intersects.length ? '太阳': '');
     }
-    
+
+    // console.log('click');
   }
 
   document.addEventListener('click', onDocumentClick, false);
@@ -302,7 +312,11 @@ const $info = document.querySelector('.info-box');
 const $header = $info.querySelector('h1');
 
 function updateInfo(message) {
-  $info.classList.toggle('show');
+  if(message === '') {
+    $info.classList.remove('show');
+  } else {
+    $info.classList.add('show');
+  }
   $header.innerHTML = message;
 }
 
