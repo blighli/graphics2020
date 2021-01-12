@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+#btn-oc {
+  position: absolute;
+  border: 2px solid white;
+  border-radius: 5px;
+  left: 5%;
+  top: 20%;
+  z-index: 16;
+  color: white;
+}
+#btn-fpc {
+  position: absolute;
+  border: 2px solid white;
+  border-radius: 5px;
+  left: 5%;
+  top: 25%;
+  z-index: 16;
+  color: white;
+}
