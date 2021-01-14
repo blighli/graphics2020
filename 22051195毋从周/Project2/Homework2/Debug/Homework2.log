@@ -1,0 +1,12 @@
+﻿  homework.cpp
+E:\code\OpenGL\tr\OpenGL\include\learnopengl\shader_m.h(56,40): warning C4101: “e”: 未引用的局部变量
+E:\code\OpenGL\Homework2\homework.cpp(220,28): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+E:\code\OpenGL\Homework2\homework.cpp(333,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+E:\code\OpenGL\Homework2\homework.cpp(334,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+E:\code\OpenGL\Homework2\homework.cpp(338,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+E:\code\OpenGL\Homework2\homework.cpp(339,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+E:\code\OpenGL\Homework2\homework.cpp(341,13): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+E:\code\OpenGL\Homework2\homework.cpp(342,13): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+E:\code\OpenGL\Homework2\homework.cpp(351,31): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+  Homework2.vcxproj -> E:\code\OpenGL\Homework2\Debug\Homework2.exe
