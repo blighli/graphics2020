@@ -1,0 +1,13 @@
+﻿D:\Program Files\VisualStudio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(Project1.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  test2.cpp
+d:\game\三维动画与交互技术\project01\project1\test2.cpp(62): warning C4244: “=”: 从“int”转换到“GLfloat”，可能丢失数据
+d:\game\三维动画与交互技术\project01\project1\test2.cpp(63): warning C4244: “=”: 从“int”转换到“GLfloat”，可能丢失数据
+d:\game\三维动画与交互技术\project01\project1\test2.cpp(73): warning C4244: “=”: 从“int”转换到“GLfloat”，可能丢失数据
+d:\game\三维动画与交互技术\project01\project1\test2.cpp(74): warning C4244: “=”: 从“int”转换到“GLfloat”，可能丢失数据
+d:\game\三维动画与交互技术\project01\project1\test2.cpp(86): warning C4244: “初始化”: 从“GLfloat”转换到“GLint”，可能丢失数据
+d:\game\三维动画与交互技术\project01\project1\test2.cpp(87): warning C4244: “初始化”: 从“GLfloat”转换到“GLint”，可能丢失数据
+d:\game\三维动画与交互技术\project01\project1\test2.cpp(91): warning C4244: “=”: 从“int”转换到“GLfloat”，可能丢失数据
+d:\game\三维动画与交互技术\project01\project1\test2.cpp(92): warning C4244: “=”: 从“int”转换到“GLfloat”，可能丢失数据
+d:\game\三维动画与交互技术\project01\project1\test2.cpp(97): warning C4244: “=”: 从“int”转换到“GLfloat”，可能丢失数据
+d:\game\三维动画与交互技术\project01\project1\test2.cpp(98): warning C4244: “=”: 从“int”转换到“GLfloat”，可能丢失数据
+  Project1.vcxproj -> D:\game\三维动画与交互技术\Project01\Debug\Project01.exe

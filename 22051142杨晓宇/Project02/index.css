@@ -1,0 +1,10 @@
+#textarea {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  z-index: 16;
+  color: white;
+}
+#webgl-output {
+  z-index: 8;
+}
