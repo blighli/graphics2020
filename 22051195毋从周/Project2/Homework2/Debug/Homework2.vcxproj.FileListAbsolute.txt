@@ -1,0 +1,2 @@
+E:\code\OpenGL\Homework2\Debug\Homework2.exe
+E:\code\OpenGL\Homework2\Debug\Homework2.pdb
