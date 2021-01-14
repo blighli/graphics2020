@@ -24,8 +24,8 @@ namespace Luna
 		}
 		void debug_vprintf(const c8* fmt, VarList args)
 		{
-			char buf[1024];
-			vsnprintf_s(buf, 1024, fmt, args);
+			char buf[2048];
+			vsnprintf_s(buf, 2048, fmt, args);
 			::OutputDebugStringA(buf);
 		}
 	}
