@@ -1,0 +1,12 @@
+﻿  test3.cpp
+d:\game\三维动画与交互技术\project02\test3.cpp(377): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+d:\game\三维动画与交互技术\project02\test3.cpp(417): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+d:\game\三维动画与交互技术\project02\test3.cpp(425): warning C4305: “参数”: 从“double”到“GLfloat”截断
+d:\game\三维动画与交互技术\project02\test3.cpp(452): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\game\三维动画与交互技术\project02\test3.cpp(458): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\game\三维动画与交互技术\project02\test3.cpp(462): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\game\三维动画与交互技术\project02\test3.cpp(468): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\game\三维动画与交互技术\project02\test3.cpp(472): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\game\三维动画与交互技术\project02\test3.cpp(610): warning C4244: “=”: 从“GLdouble”转换到“float”，可能丢失数据
+d:\game\三维动画与交互技术\project02\test3.cpp(617): warning C4244: “=”: 从“GLdouble”转换到“float”，可能丢失数据
+  Project02.vcxproj -> D:\game\三维动画与交互技术\Project02\Debug\Project02.exe
