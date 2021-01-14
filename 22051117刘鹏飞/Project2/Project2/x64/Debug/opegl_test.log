@@ -1,0 +1,41 @@
+﻿  glad.c
+  main.cpp
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\shader.h(44,40): warning C4101: “e”: 未引用的局部变量
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\main.cpp(118,11): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\main.cpp(256,22): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\main.cpp(388,10): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\main.cpp(389,10): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\main.cpp(392,11): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\main.cpp(393,11): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\main.cpp(397,16): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\main.cpp(398,16): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\main.cpp(399,10): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\main.cpp(400,10): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\main.cpp(410,28): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\main.cpp(479,24): warning C4838: 从“FT_Pos”转换到“GLuint”需要收缩转换
+LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+freetype.lib(autofit.obj) : warning LNK4099: 未找到 PDB“freetype.pdb”(使用“freetype.lib(autofit.obj)”或在“D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\freetype.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(ftbase.obj) : warning LNK4099: 未找到 PDB“freetype.pdb”(使用“freetype.lib(ftbase.obj)”或在“D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\freetype.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(ftbitmap.obj) : warning LNK4099: 未找到 PDB“”(使用“freetype.lib(ftbitmap.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(ftinit.obj) : warning LNK4099: 未找到 PDB“freetype.pdb”(使用“freetype.lib(ftinit.obj)”或在“D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\freetype.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(ftsystem.obj) : warning LNK4099: 未找到 PDB“”(使用“freetype.lib(ftsystem.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(bdf.obj) : warning LNK4099: 未找到 PDB“freetype.pdb”(使用“freetype.lib(bdf.obj)”或在“D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\freetype.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(cff.obj) : warning LNK4099: 未找到 PDB“”(使用“freetype.lib(cff.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(type1cid.obj) : warning LNK4099: 未找到 PDB“freetype.pdb”(使用“freetype.lib(type1cid.obj)”或在“D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\freetype.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(ftgzip.obj) : warning LNK4099: 未找到 PDB“”(使用“freetype.lib(ftgzip.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(ftlzw.obj) : warning LNK4099: 未找到 PDB“freetype.pdb”(使用“freetype.lib(ftlzw.obj)”或在“D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\freetype.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(pcf.obj) : warning LNK4099: 未找到 PDB“freetype.pdb”(使用“freetype.lib(pcf.obj)”或在“D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\freetype.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(pfr.obj) : warning LNK4099: 未找到 PDB“freetype.pdb”(使用“freetype.lib(pfr.obj)”或在“D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\freetype.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(psaux.obj) : warning LNK4099: 未找到 PDB“”(使用“freetype.lib(psaux.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(pshinter.obj) : warning LNK4099: 未找到 PDB“freetype.pdb”(使用“freetype.lib(pshinter.obj)”或在“D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\freetype.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(psmodule.obj) : warning LNK4099: 未找到 PDB“”(使用“freetype.lib(psmodule.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(raster.obj) : warning LNK4099: 未找到 PDB“freetype.pdb”(使用“freetype.lib(raster.obj)”或在“D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\freetype.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(sfnt.obj) : warning LNK4099: 未找到 PDB“”(使用“freetype.lib(sfnt.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(smooth.obj) : warning LNK4099: 未找到 PDB“freetype.pdb”(使用“freetype.lib(smooth.obj)”或在“D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\freetype.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(truetype.obj) : warning LNK4099: 未找到 PDB“freetype.pdb”(使用“freetype.lib(truetype.obj)”或在“D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\freetype.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(type1.obj) : warning LNK4099: 未找到 PDB“freetype.pdb”(使用“freetype.lib(type1.obj)”或在“D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\freetype.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(type42.obj) : warning LNK4099: 未找到 PDB“freetype.pdb”(使用“freetype.lib(type42.obj)”或在“D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\freetype.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(winfnt.obj) : warning LNK4099: 未找到 PDB“freetype.pdb”(使用“freetype.lib(winfnt.obj)”或在“D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\freetype.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+freetype.lib(ftdebug.obj) : warning LNK4099: 未找到 PDB“”(使用“freetype.lib(ftdebug.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+  opegl_test.vcxproj -> D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\opegl_test.exe

@@ -1,0 +1,4 @@
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\x64\Debug\opegl_test.exe
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\x64\Debug\opegl_test.pdb
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\opegl_test.exe
+D:\homework\3D_ animation\graphics2020\22051117刘鹏飞\Project2\Project2\x64\Debug\opegl_test.pdb
