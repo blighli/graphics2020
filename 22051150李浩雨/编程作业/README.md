@@ -75,6 +75,10 @@
 * 附加库目录 ..\packages\glew.1.9.0.1\build\native\lib\v110\Win32\Debug\static
 * 附加依赖项  opengl32.lib  glew.lib
 
+## 演示
+
+![homework_2](homework_2.gif)
+
 # 编程作业3：复杂三维模型显示（homework_3）
 
 ## 控制
@@ -120,8 +124,6 @@
 * 附加库目录 ..\packages\glew.1.9.0.1\build\native\lib\v110\Win32\Debug\static
 * 附加依赖项  opengl32.lib  glew.lib
 
-## 演示GIF
+## 演示
 
-![demo1](./Res/demo21.gif)
-
-![demo22](./Res/demo22.gif)
+![homework_3](homework_3.gif)
