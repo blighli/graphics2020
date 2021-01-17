@@ -1,0 +1,38 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(477,5): warning MSB8004: Output 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+  Cube.cpp
+D:\OpenGL\Project01\Cube\Cube.cpp(177,21): warning C4305: “-=”: 从“double”到“T”截断
+          with
+          [
+              T=float
+          ]
+D:\OpenGL\Project01\Cube\Cube.cpp(180,21): warning C4305: “+=”: 从“double”到“T”截断
+          with
+          [
+              T=float
+          ]
+D:\OpenGL\Project01\Cube\Cube.cpp(183,21): warning C4305: “-=”: 从“double”到“T”截断
+          with
+          [
+              T=float
+          ]
+D:\OpenGL\Project01\Cube\Cube.cpp(186,21): warning C4305: “+=”: 从“double”到“T”截断
+          with
+          [
+              T=float
+          ]
+D:\OpenGL\Project01\Cube\Cube.cpp(189,21): warning C4305: “+=”: 从“double”到“T”截断
+          with
+          [
+              T=float
+          ]
+D:\OpenGL\Project01\Cube\Cube.cpp(192,21): warning C4305: “-=”: 从“double”到“T”截断
+          with
+          [
+              T=float
+          ]
+D:\OpenGL\Project01\Cube\Cube.cpp(195,16): warning C4305: “+=”: 从“double”到“float”截断
+D:\OpenGL\Project01\Cube\Cube.cpp(198,16): warning C4305: “+=”: 从“double”到“float”截断
+D:\OpenGL\Project01\Cube\Cube.cpp(201,16): warning C4305: “+=”: 从“double”到“float”截断
+D:\OpenGL\Project01\Cube\Cube.cpp(215,18): warning C4305: “+=”: 从“double”到“float”截断
+D:\OpenGL\Project01\Cube\Cube.cpp(216,18): warning C4305: “+=”: 从“double”到“float”截断
+  Cube.vcxproj -> D:\OpenGL\Project01\bin\Cube.exe

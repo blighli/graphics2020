@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(477,5): warning MSB8004: Output 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+  SolarSystem.cpp
+D:\OpenGL\Project02\SolarSystem\SolarSystem.cpp(173,33): warning C4305: “初始化”: 从“double”到“float”截断
+  SolarSystem.vcxproj -> D:\OpenGL\Project02\bin\SolarSystem.exe
