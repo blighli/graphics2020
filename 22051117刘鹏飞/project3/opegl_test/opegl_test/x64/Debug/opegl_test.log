@@ -1,0 +1,19 @@
+﻿  modeltest.cpp
+D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\opegl_test\shader.h(44,40): warning C4101: “e”: 未引用的局部变量
+D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\opegl_test\camera.h(88,22): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\opegl_test\camera.h(91,25): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\opegl_test\camera.h(92,23): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\opegl_test\camera.h(111,22): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\opegl_test\camera.h(114,25): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\opegl_test\camera.h(115,23): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\opegl_test\mesh.h(84,1): warning C4267: “参数”: 从“size_t”转换到“GLsizei”，可能丢失数据
+D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\opegl_test\modeltest.cpp(97,28): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\opegl_test\modeltest.cpp(181,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\opegl_test\modeltest.cpp(182,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\opegl_test\modeltest.cpp(186,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\opegl_test\modeltest.cpp(187,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\opegl_test\modeltest.cpp(189,13): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\opegl_test\modeltest.cpp(190,13): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\opegl_test\modeltest.cpp(199,31): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+  opegl_test.vcxproj -> D:\homework\3D_ animation\22051117刘鹏飞\project3\opegl_test\x64\Debug\opegl_test.exe
