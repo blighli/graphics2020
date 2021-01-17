@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+      position: relative;
+    }
+
+    #header {
+      padding: 2px;
+      position: absolute;
+      bottom: 20%;
+      right: 5%;
+      z-index: 120;
+      background: #ccc;
+      display: flex;
+      border-radius: 2px;
+    }
+
+    #header .box {
+      border: 1px solid;
+      height: 100%;
+      cursor: pointer;
+      width: 80px;
+      height: 30px;
+      margin: 1px;
+      line-height: 30px;
+      background: #ccc;
+    }
+  </style>
+  <body>
+    <div id="header">
+      <div class="box">移动模型</div>
+    </div>
+  </body>
+</html>
