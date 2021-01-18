@@ -1,0 +1,76 @@
+﻿“HelloWorlds.exe”(Win32): 已加载“C:\Users\iLifetruth\Desktop\Project03\HelloWorlds\Debug\HelloWorlds.exe”。已加载符号。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\ntdll.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\kernel32.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\KernelBase.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\opengl32.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\msvcrt.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\advapi32.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\sechost.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\rpcrt4.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\glu32.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\sspicli.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\user32.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\cryptbase.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\msvcp140d.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Users\iLifetruth\Desktop\Project03\HelloWorlds\HelloWorlds\glut32.dll”。模块已生成，不包含符号。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\win32u.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\bcryptprimitives.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\gdi32.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\vcruntime140d.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\gdi32.dll”。
+“HelloWorlds.exe”(Win32): 已卸载“C:\Windows\SysWOW64\gdi32.dll”
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\gdi32full.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\combase.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\msvcp_win.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\ucrtbased.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\ucrtbase.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\ucrtbase.dll”。
+“HelloWorlds.exe”(Win32): 已卸载“C:\Windows\SysWOW64\ucrtbase.dll”
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\winmm.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\winmmbase.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\winmmbase.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\cfgmgr32.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\winmmbase.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\DXCore.dll”。
+“HelloWorlds.exe”(Win32): 已卸载“C:\Windows\SysWOW64\winmmbase.dll”
+“HelloWorlds.exe”(Win32): 已卸载“C:\Windows\SysWOW64\winmmbase.dll”
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\imm32.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\uxtheme.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\msctf.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\oleaut32.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\System32\DriverStore\FileRepository\igdlh64.inf_amd64_a2d2bce6b74074ef\ig9icd32.dll”。
+“HelloWorlds.exe”(Win32): 已卸载“C:\Windows\System32\DriverStore\FileRepository\igdlh64.inf_amd64_a2d2bce6b74074ef\ig9icd32.dll”
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\System32\DriverStore\FileRepository\igdlh64.inf_amd64_a2d2bce6b74074ef\ig9icd32.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\ole32.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\shell32.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\SHCore.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\windows.storage.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\profapi.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\powrprof.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\umpdc.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\shlwapi.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\kernel.appcore.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\cryptsp.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\dwmapi.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\dxgi.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\ResourcePolicyClient.dll”。
+“HelloWorlds.exe”(Win32): 已卸载“C:\Windows\SysWOW64\ResourcePolicyClient.dll”
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\version.dll”。
+“HelloWorlds.exe”(Win32): 已卸载“C:\Windows\SysWOW64\version.dll”
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\System32\DriverStore\FileRepository\igdlh64.inf_amd64_a2d2bce6b74074ef\igdgmm32.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\System32\DriverStore\FileRepository\igdlh64.inf_amd64_a2d2bce6b74074ef\igc32.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\TextInputFramework.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\CoreMessaging.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\CoreUIComponents.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\ntmarta.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\WinTypes.dll”。
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\WinTypes.dll”。
+“HelloWorlds.exe”(Win32): 已卸载“C:\Windows\SysWOW64\WinTypes.dll”
+“HelloWorlds.exe”(Win32): 已加载“C:\Windows\SysWOW64\iertutil.dll”。
+线程 0x5330 已退出，返回值为 0 (0x0)。
+线程 0x1334 已退出，返回值为 0 (0x0)。
+线程 0x5d08 已退出，返回值为 0 (0x0)。
+线程 0x46fc 已退出，返回值为 0 (0x0)。
+线程 0x1634 已退出，返回值为 0 (0x0)。
+线程 0x1ec0 已退出，返回值为 0 (0x0)。
+程序“[18996] HelloWorlds.exe”已退出，返回值为 0 (0x0)。
