@@ -52,7 +52,7 @@ void setLightRes() {
 void init() {
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(500, 500);
-    glutCreateWindow("Marveliu's HomeWork3");
+    glutCreateWindow("Project03");
     glEnable(GL_DEPTH_TEST);
     glShadeModel(GL_SMOOTH);
     setLightRes();
