@@ -1,2 +1,0 @@
-E:\code\OpenGL\Project4\Debug\Project4.exe
-E:\code\OpenGL\Project4\Debug\Project4.pdb
