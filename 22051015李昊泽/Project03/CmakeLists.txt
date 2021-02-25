@@ -1,0 +1,31 @@
+cmake_minimum_required(VERSION 3.0.0)
+project(run VERSION 0.1.0)
+
+# 使用 C++ 11 标准
+set(CMAKE_CXX_STANDARD 17)
+
+# 添加头文件
+set(GLAD_H ${PROJECT_SOURCE_DIR}/include)
+set(UTILS  ${PROJECT_SOURCE_DIR}/utils)
+include_directories(${GLAD_H} ${GLFW_H} ${UTILS})
+
+# 添加目标链接
+set(GLFW_LINK ${PROJECT_SOURCE_DIR}/lib/libglfw.3.dylib)
+set(ASSIMP_LINK ${PROJECT_SOURCE_DIR}/lib/libassimp.5.dylib)
+link_libraries(${GLFW_LINK} ${ASSIMP_LINK})
+
+# 执行编译命令
+set(SOURCES utils/glad.c main.cpp utils/stb_image.cpp utils/shader.cpp)
+add_executable(run ${SOURCES})
+
+# 链接系统的 OpenGL 框架
+if (APPLE)
+    target_link_libraries(run "-framework OpenGL")
+endif()
+
+include(CTest)
+enable_testing()
+
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)
